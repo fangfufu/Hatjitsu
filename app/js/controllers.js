@@ -222,7 +222,7 @@ function RoomCtrl($scope, $routeParams, $timeout, socket) {
     var play = ['A\u2660', '2', '3', '5', '8', '\u2654'];
     var tshirt = ['XL', 'L', 'M', 'S', 'XS', '?'];
     switch (val) {
-    case ('PInT'):
+    case ('pint'):
       return pint;
     case ('fib'):
       return fib;

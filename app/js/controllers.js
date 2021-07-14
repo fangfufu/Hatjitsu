@@ -104,6 +104,14 @@ function cardValue(vote){
     return 1;
   } else if (vote == '\u2654') {
     return 13;
+  } else if (vote == '¼') {
+    return 0.25;
+  } else if (vote == '½') {
+      return 0.5;
+  } else if (vote == '1½') {
+      return 1.5;
+  } else if (vote == '2½') {
+      return 2.5;
   }
 }
 

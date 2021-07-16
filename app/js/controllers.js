@@ -112,6 +112,8 @@ function cardValue(vote){
       return 1.5;
   } else if (vote == '2½') {
       return 2.5;
+  } else if (vote == '3½') {
+      return 3.5;
   }
 }
 
@@ -223,7 +225,7 @@ function RoomCtrl($scope, $routeParams, $timeout, socket) {
   };
 
   var chooseCardPack = function (val) {
-    var pint = ['¼', '½', '1', '1½', '2', '2½', '3', '4', '6', '8', '?', '↺'];
+    var pint = ['¼', '½', '1', '1½', '2', '2½', '3', '3½', '4', '6', '8', '?', '↺'];
     var fib = ['0', '1', '2', '3', '5', '8', '13', '21', '34', '55', '89', '?'];
     var goat = ['0', '\u00BD', '1', '2', '3', '5', '8', '13', '20', '40', '100', '?', '\u2615'];
     var seq = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '?'];

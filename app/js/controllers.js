@@ -114,6 +114,10 @@ function cardValue(vote){
       return 2.5;
   } else if (vote == '3½') {
       return 3.5;
+  } else if (vote == '-1') {
+      return -1;
+  } else if (vote == '-2') {
+      return -2;
   }
 }
 
@@ -227,6 +231,7 @@ function RoomCtrl($scope, $routeParams, $timeout, socket) {
 
   var chooseCardPack = function (val) {
     var pint = ['¼', '½', '1', '1½', '2', '2½', '3', '3½', '4', '6', '8', '?', '↺'];
+    var beer = ['-2', '-1', '0', '1', '2'];
     var fib = ['0', '1', '2', '3', '5', '8', '13', '21', '34', '55', '89', '?'];
     var goat = ['0', '\u00BD', '1', '2', '3', '5', '8', '13', '20', '40', '100', '?', '\u2615'];
     var seq = ['0', '1', '2', '3', '4', '5', '6', '7', '8', '9', '10', '?'];
@@ -235,6 +240,8 @@ function RoomCtrl($scope, $routeParams, $timeout, socket) {
     switch (val) {
     case ('pint'):
       return pint;
+    case ('beer'):
+      return beer;
     case ('fib'):
       return fib;
     case ('goat'):

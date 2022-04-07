@@ -1,5 +1,5 @@
 <div ng-init="configureRoom()">
-  <p class="roomNumber">Room: {{roomId}}</p>
+  <p class="roomNumber">Room: {{roomId}}, Voted: {{votes.length}}/{{voterCount}}</p>
 
   <section class="cardPanel" >
     <div class="row cardPanel-meta">
@@ -57,7 +57,7 @@
 
       <div ng-switch-when="true">
         <div ng-switch on="voted">
-          <p ng-switch-when="false">You haven't estimated yet</p>
+          <p ng-switch-when="false">You haven't estimated yet. </p>
           <p ng-switch-when="true">Your current estimate: <b>{{myVote}}</b></p>
         </div>
       </div>

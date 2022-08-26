@@ -3,7 +3,7 @@ services:
   poker:
     build: .
     ports:
-      - "11151:5000"
+      - "127.0.0.1:11151:5000"
     volumes:
       - /Hatjitsu/node_modules
       - .:/Hatjitsu
